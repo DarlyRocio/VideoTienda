@@ -26,6 +26,12 @@ public class TiendaVideojuegosApplication implements CommandLineRunner {
 			
 		try {
 			
+		//	Clientes clienteInsertar = new Clientes("Mariana","Lopez",35,"873409","calle 15","lolo@lolo");
+		//	repositorioCli.save(clienteInsertar);
+			
+			
+			
+			
 			List<Clientes> clientes = repositorioCli.findAll();
 						
 			clientes.forEach(System.out::println);
