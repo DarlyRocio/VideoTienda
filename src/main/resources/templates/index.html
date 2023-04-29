@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http:thymeleaf.org">
-<head th:fragment="{plantilla/template :: head}">
-
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
 </head>
 
 <body>
-<header th:fragment="{plantilla/template ::header}"></header>
-<div class="container">
-<h1>De nuevo aqui</h1>
-</div>
+<header th:replace="plantilla/template :: header"></header>
 
-<footer th:fragment="{plantilla/template : :footer}"></footer>
 
+
+<footer th:replace="plantilla/template :: footer"></footer>>
 </body>
 </html>
