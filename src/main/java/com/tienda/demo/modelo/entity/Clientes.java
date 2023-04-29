@@ -1,18 +1,23 @@
-package com.tienda.demo.modelo;
+package com.tienda.demo.modelo.entity;
+
+import java.io.Serializable;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name= "clientes")
-public class Clientes {
-	 @Id
+@Table(name= "Clientes")
+public class Clientes implements Serializable {
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	 private Long idCliente;
+	 private Long id_Cliente;
 	 private String nombres;
 	 private String apellidos;
 	 private int edad;
@@ -27,10 +32,10 @@ public class Clientes {
 	}
 	
 	
-	public Clientes(Long idCliente, String nombres, String apellidos, int edad, String telefono,
+	public Clientes(Long id_Cliente, String nombres, String apellidos, int edad, String telefono,
 			String direccion,String email) {
 		super();
-		this.idCliente = idCliente;
+		this.id_Cliente = id_Cliente;
 		this.nombres = nombres;
 		this.apellidos = apellidos;
 		this.edad = edad;
@@ -53,10 +58,10 @@ public class Clientes {
 
 
 	public Long getIdCliente() {
-		return idCliente;
+		return id_Cliente;
 	}
-	public void setIdCliente(Long idCliente) {
-		this.idCliente = idCliente;
+	public void setIdCliente(Long id_Cliente) {
+		this.id_Cliente = id_Cliente;
 	}
 	public String getNombres() {
 		return nombres;
@@ -98,7 +103,7 @@ public class Clientes {
 
 	@Override
 	public String toString() {
-		return "Clientes [idCliente=" + idCliente + ", nombres=" + nombres + ", apellidos=" + apellidos + ", edad="
+		return "Clientes [id_Cliente=" + id_Cliente + ", nombres=" + nombres + ", apellidos=" + apellidos + ", edad="
 				+ edad + ", telefono=" + telefono + ", direccion=" + direccion + ", email=" + email + "]";
 	}
 

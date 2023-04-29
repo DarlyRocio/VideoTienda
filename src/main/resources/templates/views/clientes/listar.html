@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http:thymeleaf.org">
+<head th:fragment="{plantilla/template :: head}">
+
+</head>
+
+<body>
+	<header th:fragment="{plantilla/template ::header}"></header>
+
+	<div class="container">
+		<h1 th:text="${titulo}"></h1>
+		<p th:text="${clientes}"></p>
+	</div>
+
+	
+
+
+
+	<footer th:fragment="{plantilla/template : :footer}"></footer>
+
+</body>
+</html>
