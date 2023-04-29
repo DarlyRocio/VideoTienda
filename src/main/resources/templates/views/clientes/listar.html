@@ -8,9 +8,37 @@
 
 	<div class="container">
 		<h1 th:text="${titulo}"></h1>
-		<p th:text="${clientes}"></p>
+	
 	</div>
 
+<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">NOMBRES</th>
+				<th scope="col">APELLIDOS</th>
+					<th scope="col">EDAD</th>
+					<th scope="col">TELEFONO</th>
+					<th scope="col">DIRECCION</th>
+				<th scope="col">CORREO</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="c: ${cliente}">
+			<th scope="row"></th>
+			<td th:text="${c.nombres}"></td>
+			<td th:text="${c.apellidos}"></td>
+			<td th:text="${c.edad}"></td>
+			<td th:text="${c.telefono}"></td>
+			<td th:text="${c.direccion}"></td>
+			<td th:text="${c.email}"></td>
+			</tr>
+		</tbody>
+		
+	</table>
+	
+</div>
+	
 	
 <footer th:replace="plantilla/template :: footer"></footer>>
 </body>

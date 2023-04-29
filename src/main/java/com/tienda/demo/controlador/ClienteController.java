@@ -26,7 +26,7 @@ public class ClienteController {
 		List<Clientes>listadoClientes= clienteService.ListarClientes();
 				
 		model.addAttribute("titulo", "listado de Clientes");
-		model.addAttribute("clientes", listadoClientes);
+		model.addAttribute("cliente", listadoClientes);
 		
 		return "/views/clientes/listar";
 	}
