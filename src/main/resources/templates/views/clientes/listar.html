@@ -12,7 +12,7 @@
 
 
 	<div class="container">
-		<table class="table">
+		<table class="table table-striped">
 			<thead>
 				<tr>
 					<th scope="col">ID</th>
@@ -26,8 +26,7 @@
 			</thead>
 			<tbody>
 				<tr th:each="c: ${cliente}">
-					<th scope="row"></th>
-					<td th:text="${c.id_Cliente}"></td>
+					<th scope="row" th:text="${c.id_Cliente}"></th>
 					<td th:text="${c.nombres}"></td>
 					<td th:text="${c.apellidos}"></td>
 					<td th:text="${c.edad}"></td>
