@@ -17,7 +17,11 @@ import jakarta.persistence.Table;
 @Table(name="Factura_Alquiler")
 public class Factura_Alquiler implements Serializable  {
 	
-	 @Id
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	  private Long id_factura;
 	  private int idcliente; 		
@@ -28,7 +32,7 @@ public class Factura_Alquiler implements Serializable  {
 	  
 	  @ManyToOne
 	  @JoinColumn(name="id_cliente")
-	  private Clientes cliente;
+	  private Cliente cliente;
 	  
 	    
 
@@ -39,7 +43,7 @@ public class Factura_Alquiler implements Serializable  {
 
 
 	public Factura_Alquiler(int idcliente, LocalDateTime fecha_alquiler, LocalDateTime fecha_entrega, double subtotal,
-			double total, Clientes cliente) {
+			double total, Cliente cliente) {
 		super();
 		this.idcliente = idcliente;
 		this.fecha_alquiler = fecha_alquiler;
@@ -52,7 +56,7 @@ public class Factura_Alquiler implements Serializable  {
 
 
 	public Factura_Alquiler(Long id_factura, int idcliente, LocalDateTime fecha_alquiler, LocalDateTime fecha_entrega,
-			double subtotal, double total, Clientes cliente) {
+			double subtotal, double total, Cliente cliente) {
 		super();
 		this.id_factura = id_factura;
 		this.idcliente = idcliente;
@@ -137,13 +141,13 @@ public class Factura_Alquiler implements Serializable  {
 
 
 
-	public Clientes getCliente() {
+	public Cliente getCliente() {
 		return cliente;
 	}
 
 
 
-	public void setCliente(Clientes cliente) {
+	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
 

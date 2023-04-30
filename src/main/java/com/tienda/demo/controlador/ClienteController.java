@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.tienda.demo.modelo.entity.Clientes;
+import com.tienda.demo.modelo.entity.Cliente;
 import com.tienda.demo.modelo.service.IClienteService;
 
 
@@ -23,7 +23,7 @@ public class ClienteController {
 	@GetMapping("/")
 	public String listarClientes(Model model) {
 		
-		List<Clientes>listadoClientes= clienteService.ListarClientes();
+		List<Cliente>listadoClientes= clienteService.ListarClientes();
 				
 		model.addAttribute("titulo", "listado de Clientes");
 		model.addAttribute("cliente", listadoClientes);
