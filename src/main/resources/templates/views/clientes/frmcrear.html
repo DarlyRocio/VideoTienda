@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
+</head>
+
+<body>
+	<header th:replace="plantilla/template :: header"></header>
+
+	<div class="container my-3">
+
+		<div class="card">
+
+			<div class="card-header"  th:text="${titulo}"></div>
+			<div class="card-body">
+
+				<form th:action="@{/views/clientes/save}" th:object="${cliente}" method="post">
+					<div class="form-group row py-2">
+						<label  class="col-md-2" for="nombres">Nombres:</label> 
+						<input type="text" th:field="*{nombres}" class="form-control-sm col-md-6 border"
+							id="nombres" placeholder="Nombres del cliente">
+							<small></small>
+					</div>
+
+					<div class="form-group row py-2">
+						<label class="col-md-2" for="apellidos">Apellidos:</label> <input
+							type="text" th:field="*{apellidos}" class="form-control-sm col-md-6 border"
+							id="apellidos" placeholder="Apellidos del cliente"> <small></small>
+					</div>
+
+					<div class="form-group row py-2">
+						<label class="col-md-2" for="edad">Edad:</label> <input
+							type="text" th:field="*{edad}" class=" form-control-sm col-md-6 border"
+							id="edad" placeholder="Edad del cliente"> <small></small>
+					</div>
+
+					<div class="form-group row py-2">
+						<label class="col-md-2" for="telefono">Teléfono:</label> <input
+							type="text" th:field="*{telefono}" class=" form-control-sm col-md-6 border"
+							id="telefono" placeholder="Telefono del cliente"> <small></small>
+					</div>
+
+					<div class="form-group row py-2">
+						<label class="col-md-2" for="direccion">Dirección:</label> <input
+							type="text" th:field="*{direccion}" class=" form-control-sm col-md-6 border"
+							id="direccion" placeholder="Direccion del cliente"> <small></small>
+					</div>
+
+					<div class="form-group row py-2">
+						<label class="col-md-2" for="email">Email:</label> <input
+							type="text" th:field="*{email}" class=" form-control-sm col-md-6 border"
+							id="email" placeholder="Email del cliente"> <small></small>
+					</div>
+					
+					<div>
+					
+					<input type="submit" class="btn btn-secondary btn-sm" value="Guardar"/>
+					
+					</div>
+			
+
+				</form>
+
+
+
+			</div>
+
+		</div>
+
+	</div>
+	
+	<footer th:replace="plantilla/template :: footer"></footer>
+	
+</body>
+</html>
