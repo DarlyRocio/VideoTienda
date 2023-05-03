@@ -13,7 +13,7 @@
 
 	<div class="container">
 	
-	<a class="btn btn-secondary btn-sm" th:href="@{/views/clientes/crear}" th:text="'Nuevo Cliente'" title="Crear Nuevo Registro"></a>
+	<a class="btn btn-secondary btn-sm" th:href="@{/views/director/dcrear}"  th:text="'Nuevo Director'" title="Crear Nuevo Registro"></a>
 	
 	
 		<table class="table table-striped">
@@ -21,34 +21,27 @@
 				<tr>
 					<th scope="col">ID</th>
 					<th scope="col">NOMBRES</th>
-					<th scope="col">APELLIDOS</th>
-					<th scope="col">EDAD</th>
-					<th scope="col">TELEFONO</th>
-					<th scope="col">DIRECCION</th>
-					<th scope="col">CORREO</th>
+					<th scope="col">APELLIDO</th>
+					<th scope="col">VIDEOJUEGO</th>
 					<th scope="col">EDITAR</th>
 					<th scope="col">ELIMINAR</th>
 					
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="c: ${cliente}">
-					<th scope="row" th:text="${c.id_Cliente}"></th>
-					<td th:text="${c.nombres}"></td>
-					<td th:text="${c.apellidos}"></td>
-					<td th:text="${c.edad}"></td>
-					<td th:text="${c.telefono}"></td>
-					<td th:text="${c.direccion}"></td>
-					<td th:text="${c.email}"></td>
-					<td >
+				<tr th:each="l: ${listado}">
+					<th scope="row" th:text="${l.id_director}"></th>
+					<td th:text="${l.nombre}"></td>
+					<td th:text="${l.apellido}"></td>
+					<td th:text="${l.id_videojuego}"></td>
 					
-					<a class="btn btn-success btn-sm" th:href="@{/views/clientes/edit/}+${c.id_Cliente}" 
+					<td >
+					<a class="btn btn-success btn-sm" th:href="@{/views/director/edit/}+${l.id_director}" 
 					th:text="'Editar'" title="Editar Registro"></a>
 					</td>
 					
 					<td >
-					
-					<a class="btn btn-danger btn-sm" th:href="@{/views/clientes/delete/}+${c.id_Cliente}" 
+					<a class="btn btn-danger btn-sm" th:href="@{/views/director/eliminar/}+${l.id_director}" 
 					th:text="'ELiminar'" title="Eliminar Registro" onClick="return confirm('Esta seguro de eliminar el registro?');"></a>
 					
 					</td>
