@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
+</head>
+
+<body>
+	<header th:replace="plantilla/template :: header"></header>
+
+	<div class="container my-3">
+
+		<div class="card">
+
+			<div class="card-header"  th:text="${titulo}"></div>
+			<div class="card-body">
+
+				<form th:action="@{/views/productor/save}" th:object="${productor}" method="post">
+					<div class="form-group row py-2">
+					
+						<input type="hidden" th:field="*{id_productor}">
+					
+						<label  class="col-md-2" for="nombre">Nombre:</label> 
+						<input type="text" th:field="*{nombre}" class="form-control-sm col-md-6 border"
+							id="nombre" placeholder="Nombres del productor">
+							<small></small>
+					</div>
+					
+					<div class="form-group row py-2">
+						<label class="col-md-2" for="apellido">Apellido:</label> <input
+							type="text" th:field="*{apellido}" class="form-control-sm col-md-6 border"
+							id="apellido" placeholder="apellido del Productor"> <small></small>
+					</div>
+					
+
+					<div class="form-group row py-2">
+						<label class="col-md-2" for="id_videojuego">Id Videojuego:</label> <input
+							type="text" th:field="*{id_videojuego}" class="form-control-sm col-md-6 border"
+							id="id_videojuego" placeholder="Id del videojuego"> <small></small>
+					</div>
+
+						
+					<div>
+					
+					<input type="submit" class="btn btn-secondary btn-sm" value="Guardar"/>
+					
+					</div>
+			
+
+				</form>
+
+
+
+			</div>
+
+		</div>
+
+	</div>
+	
+	<footer th:replace="plantilla/template :: footer"></footer>
+	
+</body>
+</html>
