@@ -17,6 +17,5 @@ public interface IProductorService {
 	
 	public Productor buscarPorId(Long id);
 	
-	
 
 }

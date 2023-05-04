@@ -14,8 +14,13 @@ import com.tienda.demo.modelo.repository.ProductorRepositorio;
 @Service
 public class ProductorServiceImplement implements IProductorService{
 
+	
+	
 	@Autowired
 	ProductorRepositorio productorRepositorio;
+	
+	
+	
 	
 	@Override
 	public List<Productor> listarProductor() {

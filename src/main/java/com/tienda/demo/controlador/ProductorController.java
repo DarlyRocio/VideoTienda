@@ -54,7 +54,7 @@ public class ProductorController {
 	
 	
 	@GetMapping("/edit/{id}")
-	public String eliminar(@PathVariable ("id") Long id_productor, Model model) {
+	public String editar(@PathVariable ("id") Long id_productor, Model model) {
 		 
 		Productor productor= iproductorService.buscarPorId(id_productor);
 		
@@ -67,7 +67,7 @@ public class ProductorController {
 	 }
 	
 	@GetMapping("/eliminar/{id}")
-	public String eliminarproductor(@PathVariable ("id")  Long id_productor,  Model model) {
+	public String eliminarproductor(@PathVariable ("id")  Long id_productor) {
 		
 		iproductorService.eliminarProductor(id_productor);
 		

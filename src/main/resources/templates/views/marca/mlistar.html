@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
+</head>
+
+<body>
+	<header th:replace="plantilla/template :: header"></header>
+
+	<div class="container my-3">
+		<h1 th:text="${titulo}"></h1>
+	</div>
+
+
+	<div class="container">
+	
+	<a class="btn btn-secondary btn-sm" th:href="@{/views/marca/crear}"  th:text="'Ingresar Marca'" title="Crear Nuevo Registro"></a>
+	
+	
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">DESCRIPCION</th>
+					<th scope="col">ID VIDEOJUEGO</th>
+					<th scope="col">EDITAR</th>
+					<th scope="col">ELIMINAR</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="l: ${listado}">
+					<th scope="row" th:text="${l.id_marca}"></th>
+					<td th:text="${l.descripcion}"></td>
+					<td th:text="${l.id_videojuego}"></td>
+					
+					
+					<td >
+					<a class="btn btn-success btn-sm" th:href="@{/views/marca/edit/}+${l.id_marca}" 
+					th:text="'Editar'" title="Editar Registro"></a>
+					</td>
+					
+					<td >
+					<a class="btn btn-danger btn-sm" th:href="@{/views/marca/eliminar/}+${l.id_marca}" 
+					th:text="'ELiminar'" title="Eliminar Registro" onClick="return confirm('Esta seguro de eliminar el registro?');"></a>
+					
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+
+
+	<footer th:replace="plantilla/template :: footer"></footer>
+	>
+</body>
+</html>

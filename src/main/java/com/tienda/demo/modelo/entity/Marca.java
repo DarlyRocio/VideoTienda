@@ -1,0 +1,78 @@
+package com.tienda.demo.modelo.entity;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+
+@Entity
+@Table
+public class Marca implements Serializable {
+
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
+	@Column
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Long id_marca;
+	private String descripcion;
+	private int id_videojuego;
+	
+	public Marca() {
+		super();
+	}
+
+	public Marca(String descripcion, int id_videojuego) {
+		super();
+		this.descripcion = descripcion;
+		this.id_videojuego = id_videojuego;
+	}
+
+	public Marca(Long id_marca, String descripcion, int id_videojuego) {
+		super();
+		this.id_marca = id_marca;
+		this.descripcion = descripcion;
+		this.id_videojuego = id_videojuego;
+	}
+
+	public Long getId_marca() {
+		return id_marca;
+	}
+
+	public void setId_marca(Long id_marca) {
+		this.id_marca = id_marca;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public int getId_videojuego() {
+		return id_videojuego;
+	}
+
+	public void setId_videojuego(int id_videojuego) {
+		this.id_videojuego = id_videojuego;
+	}
+
+	@Override
+	public String toString() {
+		return "Marca [id_marca=" + id_marca + ", descripcion=" + descripcion + ", id_videojuego=" + id_videojuego
+				+ "]";
+	}
+
+		
+	
+}
