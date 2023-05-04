@@ -1,5 +1,7 @@
 package com.tienda.demo.modelo.entity;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,10 +11,14 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="productor")
-public class Productor {
+public class Productor implements Serializable{
 	
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@Column(name="id_productor")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

@@ -25,7 +25,7 @@ public class ProductorServiceImplement implements IProductorService{
 	@Override
 	public List<Productor> listarProductor() {
 		
-		return productorRepositorio.findAll();
+		return (List<Productor>) productorRepositorio.findAll();
 	}
 
 	

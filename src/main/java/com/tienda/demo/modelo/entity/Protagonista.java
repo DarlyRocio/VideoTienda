@@ -10,30 +10,29 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="director")
-public class Director implements Serializable{
+@Table(name="protagonista")
+public class Protagonista implements Serializable{
+	
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
-	@Column(name="id_director")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_director;
+	@Column(name="id_protagonista")
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Long id_protagonista;
 	private String nombre;
 	private String apellido;
 	private int id_videojuego;
 	
 	
-	
-	public Director() {
+	public Protagonista() {
 		super();
 	}
 
 
-		
-	public Director(String nombre, String apellido, int id_videojuego) {
+	public Protagonista(String nombre, String apellido, int id_videojuego) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -41,27 +40,23 @@ public class Director implements Serializable{
 	}
 
 
-
-	public Director(Long id_director, String nombre, String apellido, int id_videojuego) {
+	public Protagonista(Long id_protagonista, String nombre, String apellido, int id_videojuego) {
 		super();
-		this.id_director = id_director;
+		this.id_protagonista = id_protagonista;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.id_videojuego = id_videojuego;
 	}
 
 
-
-	public Long getId_director() {
-		return id_director;
+	public Long getId_protagonista() {
+		return id_protagonista;
 	}
 
 
-
-	public void setId_director(Long id_director) {
-		this.id_director = id_director;
+	public void setId_protagonista(Long id_protagonista) {
+		this.id_protagonista = id_protagonista;
 	}
-
 
 
 	public String getNombre() {
@@ -69,11 +64,9 @@ public class Director implements Serializable{
 	}
 
 
-
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
 
 
 	public String getApellido() {
@@ -81,11 +74,9 @@ public class Director implements Serializable{
 	}
 
 
-
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-
 
 
 	public int getId_videojuego() {
@@ -93,19 +84,19 @@ public class Director implements Serializable{
 	}
 
 
-
 	public void setId_videojuego(int id_videojuego) {
 		this.id_videojuego = id_videojuego;
 	}
 
 
-
 	@Override
 	public String toString() {
-		return "Director [id_director=" + id_director + ", nombre=" + nombre + ", apellido=" + apellido
+		return "Protagonista [id_protagonista=" + id_protagonista + ", nombre=" + nombre + ", apellido=" + apellido
 				+ ", id_videojuego=" + id_videojuego + "]";
 	}
+
+
 	
 	
-	
+
 }
