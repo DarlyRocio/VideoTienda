@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.tienda.demo.modelo.entity.Videojuego;
 
-public interface VideojuegoRepositorio extends JpaRepository<Videojuego,Long> {
+public interface VideojuegoRepositorio extends JpaRepository<Videojuego, Long> {
 
 }

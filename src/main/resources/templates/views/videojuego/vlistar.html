@@ -38,10 +38,10 @@
 				<tr th:each="l: ${listado}">
 					<th scope="row" th:text="${l.id_videojuego}"></th>
 					<td th:text="${l.titulo}"></td>
-					<td th:text="${l.id_director}"></td>
-					<td th:text="${l.id_productor}"></td>
-					<td th:text="${l.id_protagonista}"></td>
-					<td th:text="${l.id_marca}"></td>
+					<td th:text="${l.director.nombre}"></td>
+					<td th:text="${l.productor.nombre}"></td>
+					<td th:text="${l.protagonista.nombre}"></td>
+					<td th:text="${l.marca.descripcion}"></td>
 					<td th:text="${l.precio_alquiler}"></td>
 					<td th:text="${l.stock}"></td>
 					<td th:text="${l.fecha_lanzamiento}"></td>
@@ -49,7 +49,7 @@
 					
 					<td >
 					
-					<a class="btn btn-success btn-sm" th:href="@{/views/videojuego/edit/}+${l.id_videojuego}" 
+					<a class="btn btn-success btn-sm" th:href="@{/views/videojuego/editar/}+${l.id_videojuego}" 
 					th:text="'Editar'" title="Editar Registro"></a>
 					</td>
 					

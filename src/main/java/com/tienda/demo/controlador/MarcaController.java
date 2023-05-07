@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.tienda.demo.modelo.entity.Marca;
 import com.tienda.demo.modelo.service.IMarcaService;
 
+
+
 @Controller
 @RequestMapping("/views/marca")
 public class MarcaController  {

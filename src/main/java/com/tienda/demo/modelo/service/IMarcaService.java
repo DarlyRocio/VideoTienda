@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.tienda.demo.modelo.entity.Marca;
 
+
+
 public interface IMarcaService {
 	
 	public List<Marca> listarMarca();

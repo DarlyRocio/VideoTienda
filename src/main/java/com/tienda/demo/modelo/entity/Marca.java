@@ -24,23 +24,20 @@ public class Marca implements Serializable {
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private Long id_marca;
 	private String descripcion;
-	private int id_videojuego;
 	
 	public Marca() {
-		super();
+	super();
 	}
 
-	public Marca(String descripcion, int id_videojuego) {
+	public Marca(String descripcion) {
 		super();
 		this.descripcion = descripcion;
-		this.id_videojuego = id_videojuego;
 	}
 
-	public Marca(Long id_marca, String descripcion, int id_videojuego) {
+	public Marca(Long id_marca, String descripcion) {
 		super();
 		this.id_marca = id_marca;
 		this.descripcion = descripcion;
-		this.id_videojuego = id_videojuego;
 	}
 
 	public Long getId_marca() {
@@ -59,20 +56,14 @@ public class Marca implements Serializable {
 		this.descripcion = descripcion;
 	}
 
-	public int getId_videojuego() {
-		return id_videojuego;
-	}
-
-	public void setId_videojuego(int id_videojuego) {
-		this.id_videojuego = id_videojuego;
-	}
-
 	@Override
 	public String toString() {
-		return "Marca [id_marca=" + id_marca + ", descripcion=" + descripcion + ", id_videojuego=" + id_videojuego
-				+ "]";
+		return "Marca [id_marca=" + id_marca + ", descripcion=" + descripcion + "]";
 	}
-
+	
+	
+	
+	
 		
 	
 }

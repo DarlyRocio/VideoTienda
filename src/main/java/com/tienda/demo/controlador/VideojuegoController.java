@@ -76,12 +76,24 @@ public class VideojuegoController {
 	}
 	
 	
-	@GetMapping("/edit")
+	@GetMapping("/editar/{id}")
 	public String editarVideojuego(@PathVariable ("id") Long id_videojuego, Model model) {
 		
-		Videojuego listado = ivideojuegoService.buscarporId(id_videojuego);
+		Videojuego videojuego = ivideojuegoService.buscarporId(id_videojuego);
+		List<Director> listdirector = idirectorService.ListarDirector();
+		List<Productor> listproductor = iproductorService.listarProductor();
+		List<Protagonista> listprotagonista = iprotagonistaService.listarProtagonistas();
+		List<Marca> listmarca = imarcaService.listarMarca();
+		
+		
+		
 		model.addAttribute("titulo", "Editar Videojuego");
-		model.addAttribute("listado",listado);
+		model.addAttribute("videojuego",videojuego);
+		model.addAttribute("directores", listdirector);
+		model.addAttribute("productores", listproductor);
+		model.addAttribute("protagonistas", listprotagonista);
+		model.addAttribute("marcas",listmarca);		
+		
 		
 		return "/views/videojuego/frmvcrear";
 		
@@ -92,16 +104,16 @@ public class VideojuegoController {
 		
 		ivideojuegoService.guardarvideojuego(videojuego);
 		
-		return "Redirect:/views/videojuego/";
+		return "redirect:/views/videojuego/";
 	}
 	
 	
-	@GetMapping("/delete")
+	@GetMapping("/delete/{id}")
 	public String eliminarVideojuego(@PathVariable ("id") Long id_videojuego) {
 		
 		ivideojuegoService.eliminarjuego(id_videojuego);
 		
-		return "Redirect:/views/videojuego/";
+		return "redirect:/views/videojuego/";
 	}
 	
 

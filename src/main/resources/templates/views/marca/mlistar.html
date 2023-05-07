@@ -21,7 +21,6 @@
 				<tr>
 					<th scope="col">ID</th>
 					<th scope="col">DESCRIPCION</th>
-					<th scope="col">ID VIDEOJUEGO</th>
 					<th scope="col">EDITAR</th>
 					<th scope="col">ELIMINAR</th>
 					
@@ -31,7 +30,7 @@
 				<tr th:each="l: ${listado}">
 					<th scope="row" th:text="${l.id_marca}"></th>
 					<td th:text="${l.descripcion}"></td>
-					<td th:text="${l.id_videojuego}"></td>
+					
 					
 					
 					<td >

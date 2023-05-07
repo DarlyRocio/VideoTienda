@@ -25,7 +25,6 @@ public class Productor implements Serializable{
 	private Long id_productor;
 	private String nombre;
 	private String apellido;
-	private int id_videojuego;
 	
 	
 	public Productor() {
@@ -33,20 +32,18 @@ public class Productor implements Serializable{
 	}
 
 
-	public Productor(String nombre, String apellido, int id_videojuego) {
+	public Productor(String nombre, String apellido) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.id_videojuego = id_videojuego;
 	}
 
 
-	public Productor(Long id_productor, String nombre, String apellido, int id_videojuego) {
+	public Productor(Long id_productor, String nombre, String apellido) {
 		super();
 		this.id_productor = id_productor;
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.id_videojuego = id_videojuego;
 	}
 
 
@@ -80,21 +77,16 @@ public class Productor implements Serializable{
 	}
 
 
-	public int getId_videojuego() {
-		return id_videojuego;
-	}
-
-
-	public void setId_videojuego(int id_videojuego) {
-		this.id_videojuego = id_videojuego;
-	}
-
-
 	@Override
 	public String toString() {
-		return "Productor [id_productor=" + id_productor + ", nombre=" + nombre + ", apellido=" + apellido
-				+ ", id_videojuego=" + id_videojuego + "]";
+		return "Productor [id_productor=" + id_productor + ", nombre=" + nombre + ", apellido=" + apellido + "]";
 	}
+	
+	
+	
+	
+	
+	
 	
 }
 	

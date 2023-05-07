@@ -11,6 +11,8 @@ import com.tienda.demo.modelo.repository.ProductorRepositorio;
 
 
 
+
+
 @Service
 public class ProductorServiceImplement implements IProductorService{
 
@@ -42,10 +44,11 @@ public class ProductorServiceImplement implements IProductorService{
 		return productorRepositorio.findById(id).orElse(null);
 	}
 
+	
 	@Override
 	public void guardarProductor(Productor productor) {
-		productorRepositorio.save(productor);
 		
+		productorRepositorio.save(productor);
 	}
 
 }

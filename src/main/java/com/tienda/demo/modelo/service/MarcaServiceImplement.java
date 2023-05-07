@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 import com.tienda.demo.modelo.entity.Marca;
 import com.tienda.demo.modelo.repository.MarcaRepositorio;
 
+
+
+
+
 @Service
 public class MarcaServiceImplement implements IMarcaService{
 
@@ -31,17 +35,18 @@ public class MarcaServiceImplement implements IMarcaService{
 
 
 	@Override
-	public void guardarMarca(Marca marca) {
-		
-		marcaRepositorio.save(marca);
-		
-	}
-
-
-	@Override
 	public Marca buscarPorId(Long id) {
 		
 		return marcaRepositorio.findById(id).orElse(null);
+	}
+
+
+	
+
+	@Override
+	public void guardarMarca(Marca marca) {
+		
+		marcaRepositorio.save(marca);
 	}
 
 }

@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.tienda.demo.modelo.entity.Videojuego;
 
+
+
 public interface IVideojuegoService {
 	
 	public List<Videojuego> listarVideojuego();

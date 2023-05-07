@@ -47,14 +47,13 @@ public class Videojuego implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="id_marca")
 	private Marca marca;
-	
-	
 
+	
 	public Videojuego() {
 		super();
 	}
-	
-	
+
+
 	public Videojuego(String titulo, double precio_alquiler, int stock, LocalDate fecha_lanzamiento, String plataforma,
 			Director director, Productor productor, Protagonista protagonista, Marca marca) {
 		super();
@@ -86,82 +85,100 @@ public class Videojuego implements Serializable {
 	}
 
 
-
 	public Long getId_videojuego() {
 		return id_videojuego;
 	}
+
 
 	public void setId_videojuego(Long id_videojuego) {
 		this.id_videojuego = id_videojuego;
 	}
 
+
 	public String getTitulo() {
 		return titulo;
 	}
+
 
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 
+
 	public double getPrecio_alquiler() {
 		return precio_alquiler;
 	}
+
 
 	public void setPrecio_alquiler(double precio_alquiler) {
 		this.precio_alquiler = precio_alquiler;
 	}
 
+
 	public int getStock() {
 		return stock;
 	}
+
 
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
 
+
 	public LocalDate getFecha_lanzamiento() {
 		return fecha_lanzamiento;
 	}
+
 
 	public void setFecha_lanzamiento(LocalDate fecha_lanzamiento) {
 		this.fecha_lanzamiento = fecha_lanzamiento;
 	}
 
+
 	public String getPlataforma() {
 		return plataforma;
 	}
+
 
 	public void setPlataforma(String plataforma) {
 		this.plataforma = plataforma;
 	}
 
+
 	public Director getDirector() {
 		return director;
 	}
+
 
 	public void setDirector(Director director) {
 		this.director = director;
 	}
 
+
 	public Productor getProductor() {
 		return productor;
 	}
+
 
 	public void setProductor(Productor productor) {
 		this.productor = productor;
 	}
 
+
 	public Protagonista getProtagonista() {
 		return protagonista;
 	}
+
 
 	public void setProtagonista(Protagonista protagonista) {
 		this.protagonista = protagonista;
 	}
 
+
 	public Marca getMarca() {
 		return marca;
 	}
+
 
 	public void setMarca(Marca marca) {
 		this.marca = marca;
@@ -175,12 +192,10 @@ public class Videojuego implements Serializable {
 				+ plataforma + ", director=" + director + ", productor=" + productor + ", protagonista=" + protagonista
 				+ ", marca=" + marca + "]";
 	}
+	
+	
+	
 
-	
-	
-	
-	
-	
 	       
 
 }

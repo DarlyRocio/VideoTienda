@@ -11,6 +11,8 @@ import com.tienda.demo.modelo.repository.ProtagonistaRepositorio;
 
 
 
+
+
 @Service
 public class ProtagonistaServiceImplement implements IProtagonistaService{
 	
@@ -24,12 +26,7 @@ public class ProtagonistaServiceImplement implements IProtagonistaService{
 		return (List<Protagonista>) protagonistaRep.findAll();
 	}
 
-	@Override
-	public void guardarProtagonista(Protagonista protagonista) {
-		protagonistaRep.save(protagonista);
-		
-	}
-
+	
 	@Override
 	public void eliminar(Long id) {
 	
@@ -41,6 +38,12 @@ public class ProtagonistaServiceImplement implements IProtagonistaService{
 	public Protagonista buscarPorId(Long id) {
 	
 		return protagonistaRep.findById(id).orElse(null);
+	}
+
+	@Override
+	public void guardarProtagonista(Protagonista protagonista) {
+		
+		protagonistaRep.save(protagonista);
 	}
 
 	

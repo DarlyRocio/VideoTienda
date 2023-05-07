@@ -6,6 +6,8 @@ import com.tienda.demo.modelo.entity.Protagonista;
 
 
 
+
+
 public interface IProtagonistaService {
 	
 	

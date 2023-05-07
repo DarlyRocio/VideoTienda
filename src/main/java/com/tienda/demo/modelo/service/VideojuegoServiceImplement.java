@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.tienda.demo.modelo.entity.Videojuego;
 import com.tienda.demo.modelo.repository.VideojuegoRepositorio;
 
+
+
 @Service
 public class VideojuegoServiceImplement  implements IVideojuegoService{
 
@@ -23,12 +25,7 @@ public class VideojuegoServiceImplement  implements IVideojuegoService{
 		return (List<Videojuego>) videojuegoRep.findAll();
 	}
 
-	@Override
-	public void guardarvideojuego(Videojuego videojuego) {
-		
-		videojuegoRep.save(videojuego);
-		
-	}
+	
 
 	@Override
 	public void eliminarjuego(Long id) {
@@ -41,6 +38,13 @@ public class VideojuegoServiceImplement  implements IVideojuegoService{
 	public Videojuego buscarporId(Long id) {
 		
 		return videojuegoRep.findById(id).orElse(null);
+	}
+
+	@Override
+	public void guardarvideojuego(Videojuego videojuego) {
+		
+		videojuegoRep.save(videojuego);
+		
 	}
 	
 	
